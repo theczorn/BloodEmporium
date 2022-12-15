@@ -1,20 +1,21 @@
 If you are a user reading this file, you are in the wrong place!
 Please download the non-source code archive from https://github.com/IIInitiationnn/BloodEmporium/releases
 
+# Local Dev Install Steps (Powershell)
+1. Install [Python](https://www.python.org/downloads/)
+1. In terminal, execute `pip install pipreqs`
+1. In terminal, execute `pip install pyinstaller`
+1. In terminal, execute `pip install -r ./requirements.txt`
+
 # Compilation (Powershell)
-(Update state version)
-- pipreqs . --force
-- Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-- .\venv\Scripts\activate
-- ~~autopytoexe.exe~~
-  - ~~icon -> inspo1.ico~~
-  - ~~settings -> import config from json file -> compile.json~~
-  - ~~output directory: E:\Coding Projects\Blood Emporium Output~~
-  - ~~add empty logs\ folder~~
-  - ~~IF DEV: add empty output\ folder~~
-- .\compile.sh \<version> <optional: "dev"> OR .\compile-onefile.sh \<version> <optional: "dev">
-- deactivate
-- Set-ExecutionPolicy Restricted -Scope CurrentUser
+1. Execute `pipreqs . --force` to update our `requirements.txt` package file
+1. Enable execution for the terminal: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+1. .\venv\Scripts\activate
+1. Execute  
+    `.\compile.sh \<version_here> [optional: "dev"]`  
+    OR  
+    `.\compile-onefile.sh \<version_here> [optional: "dev"]`  
+1. Disable execution for the terminal: `Set-ExecutionPolicy Restricted -Scope CurrentUser`
 
 # New Content
 - add to killers in db
