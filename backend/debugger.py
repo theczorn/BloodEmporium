@@ -23,6 +23,8 @@ class Debugger:
         self.connections = []
 
         if self.write_to_output:
+            if not os.path.isdir(f"output"):
+                os.mkdir(f"output")
             if not os.path.isdir(f"output/{self.time}"):
                 os.mkdir(f"output/{self.time}")
             if not os.path.isdir(f"output/{self.time}/{i}"):
@@ -33,7 +35,7 @@ class Debugger:
     # merger
     def set_merger(self, merger):
         if self.write_to_output:
-            cv2.imwrite(f"output/{self.time}/collage.png", merger.cv_images)
+            cv2.imwrite(f"output/{self.time}/collage.png", merger.images)
         return self
 
     # match origin
